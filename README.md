@@ -14,7 +14,13 @@ poetry run django-admin startproject provider_guide .
 edit settings.py
     * configure allow host
     * move secret key to local_settings.py
+    * enable postgresql backend in local_settings.py
 
+setup databae
+```psql
+create user collective password 'xxxxxx';
+create schema collective authorization collective;
+```
 poetry run python manage.py migrate
 poetry run python manage.py createsuperuser
 
@@ -26,3 +32,5 @@ poetry run python manage.py migrate
 ## Specific backends
 
 poetry run python manage.py startapp bghc
+
+poetry run python manage.py startapp thcnp
