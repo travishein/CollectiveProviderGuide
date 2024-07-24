@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+<html>
+    <head>
+        <title>Sign up for The Healthcare Navigation Project Directory</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'thcnp/styles.css' %}">
+    </head>
+    <body>
+        <h2>Sign Up for The Healthcare Navigation Project Directory</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Sign Up</button>
+        </form>
+    </body>
+</html>

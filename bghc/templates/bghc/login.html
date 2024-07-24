@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+<html>
+    <head>
+        <title>{% translate "The Black Girl Health Collective Login" %}</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'bghc/styles.css' %}">
+    </head>
+    <body>
+        <h2>Login to the Black Girl Health Collective Directory</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+        </form>
+        {% get_current_language as LANGUAGE_CODE %}
+        <p>Language: {{ LANGUAGE_CODE }}</p>
+    </body>
+</html>

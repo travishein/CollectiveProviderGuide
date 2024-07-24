@@ -34,3 +34,5 @@ poetry run python manage.py migrate
 poetry run python manage.py startapp bghc
 
 poetry run python manage.py startapp thcnp
+
+poetry run python manage.py startapp directory
