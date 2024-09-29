@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "bghc.apps.BghcConfig",
     "thcnp.apps.ThcnpConfig",
     "directory.apps.DirectoryConfig",
+    "rest_framework",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",

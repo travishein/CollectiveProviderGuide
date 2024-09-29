@@ -1,11 +1,11 @@
+from directory.forms import CustomUserCreationForm
 from django.contrib.auth.views import LoginView
 from django.http.request import HttpRequest
 from django.http.response import HttpResponse
+from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.utils.translation import gettext
 from django.views import generic
-
-from directory.forms import CustomUserCreationForm
 
 
 class BghcLoginView(LoginView):
@@ -24,4 +24,5 @@ def dashboard(request: HttpRequest):
 
 
 def index(request: HttpRequest):
-    return HttpResponse(gettext("The Black Girl Health Collective"))
+    context = {"author": "Travis"}
+    return render(request, template_name="bghc/index.html", context=context)

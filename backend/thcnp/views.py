@@ -1,11 +1,10 @@
+from directory.forms import CustomUserCreationForm
 from django.contrib.auth.views import LoginView
 from django.http.request import HttpRequest
 from django.http.response import HttpResponse
 from django.urls import reverse_lazy
 from django.utils.translation import gettext
 from django.views import generic
-
-from directory.forms import CustomUserCreationForm
 
 
 class ThcnpLoginView(LoginView):

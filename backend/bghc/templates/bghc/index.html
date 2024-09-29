@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+<html>
+    <head>
+        <title>{% translate "The Black Girl Health Collective Login" %}</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'bghc/styles.css' %}">
+    </head>
+    <body>
+        <h2>The Black Girl Health Collective</h2>
+        <p>This was rendered from a template.</p>
+
+        <br/>
+
+        <p>Now this next bit is from Vue.js</p>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+import { createApp, ref } from 'vue'
+
+createApp({
+  setup() {
+    return {
+      count: ref(0)
+    }
+  }
+}).mount('#app')
+</script>
+
+<div id="app">
+  <button @click="count++">
+    Count is: {{ count }}
+  </button>
+</div>
+
+
+        {% get_current_language as LANGUAGE_CODE %}
+        <p>Language: {{ LANGUAGE_CODE }}</p>
+    </body>
+</html>

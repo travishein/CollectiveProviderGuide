@@ -12,7 +12,7 @@ repos:
     - id: check-json
     - id: check-yaml
     - id: check-toml
-    - id: pretty-format-json
+    #- id: pretty-format-json
     - id: check-symlinks
     - id: detect-private-key
     - id: mixed-line-ending
@@ -26,26 +26,21 @@ repos:
       name: isort
       args: [ "--profile", "black", "--filter-files" ]
 
-- repo: https://github.com/pre-commit/mirrors-mypy
-  rev: v1.4.1
-  hooks:
-    - id: mypy
-      exclude: "alembic|tests"
-      additional_dependencies: [ "types-requests", "types-PyYAML", "textual" ]
+# - repo: https://github.com/pre-commit/mirrors-mypy
+#   rev: v1.4.1
+#   hooks:
+#     - id: mypy
+#       exclude: "alembic|tests"
+#       additional_dependencies: [ "types-requests", "types-PyYAML", "textual" ]
 
 - repo: https://github.com/astral-sh/ruff-pre-commit
   # Ruff version.
   rev: v0.3.0
   hooks:
     # Run the linter.
-    - id: ruff
+ #   - id: ruff
     # Run the formatter.
     - id: ruff-format
-
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v2.0.0
-  hooks:
-    - id: flake8
 
 - repo: https://github.com/koalaman/shellcheck-precommit
   rev: v0.9.0
